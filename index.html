@@ -1,430 +1,639 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kartik Mashal — React Native Engineer</title>
-<meta name="description" content="Kartik Mashal — React Native Engineer building native-feeling apps for iOS and Android." />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kartik Mashal — React Native Engineer</title>
+		<meta
+			name="description"
+			content="Kartik Mashal — React Native Engineer building native-feeling apps for iOS and Android."
+		/>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
 
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- ============ NAV ============ -->
+		<nav class="nav" id="nav">
+			<div class="nav-inner">
+				<a href="#top" class="nav-logo">KM<span class="nav-logo-dot">/></span></a>
 
-<!-- ============ NAV ============ -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-logo">KM<span class="nav-logo-dot">/</span></a>
+				<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+					<span></span><span></span><span></span>
+				</button>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+				<div class="nav-links" id="navLinks">
+					<a href="#about" class="nav-link">about</a>
+					<a href="#skills" class="nav-link">skills</a>
+					<a href="#experience" class="nav-link">experience</a>
+					<a href="#builds" class="nav-link">builds</a>
+					<a href="#contact" class="nav-link">contact</a>
+					<a href="resume/Kartik_Mashal_Expreienced_RN_Dev.pdf" download class="nav-resume-btn">
+						<svg
+							width="15"
+							height="15"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+						</svg>
+						Resume
+					</a>
+				</div>
+			</div>
+		</nav>
 
-    <div class="nav-links" id="navLinks">
-      <a href="#about" class="nav-link">about</a>
-      <a href="#skills" class="nav-link">skills</a>
-      <a href="#experience" class="nav-link">experience</a>
-      <a href="#builds" class="nav-link">builds</a>
-      <a href="#contact" class="nav-link">contact</a>
-      <a href="resume/Kartik_Mashal_Resume.pdf" download class="nav-resume-btn">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
-        Resume
-      </a>
-    </div>
-  </div>
-</nav>
+		<!-- ============ HERO ============ -->
+		<header class="hero" id="top">
+			<div class="hero-bg-grid" aria-hidden="true"></div>
+			<div class="hero-inner">
+				<div class="hero-copy" data-reveal>
+					<p class="eyebrow-tag">
+						&lt;<span class="hero-title-highlight">KartikMashal</span>
+						<span class="eyebrow-tag-attr">role</span>=<span class="eyebrow-tag-val"
+							>"react-native-engineer"</span
+						>
+						/&gt;
+					</p>
+					<h1 class="hero-title">
+						Building apps that<br /><span class="hero-title-highlight">feel native</span> —<br />on both
+						platforms.
+					</h1>
+					<p class="hero-subtitle">
+						React Native Engineer with nearly 4 years shipping production mobile apps used by millions. I
+						turn Figma files into pixel-perfect, animated, cross-platform experiences — and the native code
+						underneath them.
+					</p>
 
-<!-- ============ HERO ============ -->
-<header class="hero" id="top">
-  <div class="hero-bg-grid" aria-hidden="true"></div>
-  <div class="hero-inner">
+					<div class="hero-actions">
+						<a href="#contact" class="btn btn-primary"> Get in touch </a>
+						<a href="resume/Kartik_Mashal_Expreienced_RN_Dev.pdf" download class="btn btn-secondary">
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+							</svg>
+							Download résumé
+						</a>
+					</div>
 
-    <div class="hero-copy" data-reveal>
-      <p class="eyebrow-tag">&lt;KartikMashal <span class="eyebrow-tag-attr">role</span>=<span class="eyebrow-tag-val">"react-native-engineer"</span> /&gt;</p>
-      <h1 class="hero-title">Building apps that<br><span class="hero-title-highlight">feel native</span> —<br>on both platforms.</h1>
-      <p class="hero-subtitle">
-        React Native Engineer with nearly 4 years shipping production mobile apps used by millions.
-        I turn Figma files into pixel-perfect, animated, cross-platform experiences — and the native
-        code underneath them.
-      </p>
+					<div class="hero-socials">
+						<a
+							href="https://github.com/kartikmashal8"
+							target="_blank"
+							rel="noopener"
+							aria-label="GitHub"
+							class="social-icon"
+						>
+							<svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.07.78 2.16 0 1.56-.02 2.81-.02 3.19 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/kartik-a-mashal-30036219a/"
+							target="_blank"
+							rel="noopener"
+							aria-label="LinkedIn"
+							class="social-icon"
+						>
+							<svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.instagram.com/kartikmashal?igsh=Z3MxdHY4c2lpb3E1&utm_source=qr"
+							target="_blank"
+							rel="noopener"
+							aria-label="Instagram"
+							class="social-icon"
+						>
+							<svg
+								width="19"
+								height="19"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+							>
+								<rect x="2" y="2" width="20" height="20" rx="5.5" />
+								<circle cx="12" cy="12" r="4.2" />
+								<circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
+							</svg>
+						</a>
+						<a href="mailto:kartikmashal8@gmail.com" aria-label="Email" class="social-icon">
+							<svg
+								width="19"
+								height="19"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+							>
+								<rect x="2" y="4" width="20" height="16" rx="3" />
+								<path d="m3 6 9 7 9-7" />
+							</svg>
+						</a>
+					</div>
+				</div>
 
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">
-          Get in touch
-        </a>
-        <a href="resume/Kartik_Mashal_Resume.pdf" download class="btn btn-secondary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
-          Download résumé
-        </a>
-      </div>
+				<div class="hero-visual" data-reveal>
+					<div class="device-frame device-ios">
+						<div class="device-notch"></div>
+						<div class="device-screen">
+							<div class="mock-statusbar">
+								<span>9:41</span>
+								<span class="mock-statusbar-icons">●●●</span>
+							</div>
+							<div class="mock-appbar">Rewards</div>
+							<div class="mock-card">
+								<div class="mock-card-line w70"></div>
+								<div class="mock-card-line w40"></div>
+							</div>
+							<div class="mock-card">
+								<div class="mock-card-line w60"></div>
+								<div class="mock-card-line w30"></div>
+							</div>
+							<div class="mock-toast" id="mockToast">
+								<span class="mock-toast-dot"></span>
+								$5 off applied to your order
+							</div>
+						</div>
+					</div>
+					<div class="device-frame device-android">
+						<div class="device-cam"></div>
+						<div class="device-screen">
+							<div class="mock-statusbar">
+								<span>9:41</span>
+								<span class="mock-statusbar-icons">▲●■</span>
+							</div>
+							<div class="mock-appbar mock-appbar-alt">Store Search</div>
+							<div class="mock-card mock-card-alt">
+								<div class="mock-card-line w80"></div>
+								<div class="mock-card-line w50"></div>
+							</div>
+							<div class="mock-card mock-card-alt">
+								<div class="mock-card-line w60"></div>
+								<div class="mock-card-line w35"></div>
+							</div>
+						</div>
+					</div>
+					<span class="float-chip chip-1">TypeScript</span>
+					<span class="float-chip chip-2">React-Native</span>
+					<span class="float-chip chip-3">Kotlin</span>
+					<span class="float-chip chip-4">Redux</span>
+					<span class="float-chip chip-5">Swift</span>
+				</div>
+			</div>
+			<a href="#about" class="scroll-cue" aria-label="Scroll down">
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M12 4v16m0 0l-6-6m6 6l6-6" />
+				</svg>
+			</a>
+		</header>
 
-      <div class="hero-socials">
-        <a href="https://github.com/kartikmashal8" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.07.78 2.16 0 1.56-.02 2.81-.02 3.19 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/kartik-a-mashal-30036219a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
-        </a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="mailto:kartikmashal8@gmail.com" aria-label="Email" class="social-icon">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
-        </a>
-      </div>
-    </div>
+		<main>
+			<!-- ============ ABOUT ============ -->
+			<section class="section" id="about">
+				<div class="section-inner">
+					<p class="section-eyebrow" data-reveal>// about</p>
+					<div class="about-grid">
+						<div class="about-photo" data-reveal>
+							<div class="photo-frame">
+								<img
+									src="assets/images/profile.jpeg"
+									alt="Kartik Mashal"
+									onerror="
+										this.style.display = 'none';
+										this.nextElementSibling.style.display = 'flex';
+									"
+								/>
+								<!-- <div class="photo-placeholder">
+									<svg
+										width="56"
+										height="56"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+									>
+										<circle cx="12" cy="8" r="4" />
+										<path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6" />
+									</svg>
+									<span>Add assets/images/profile.jpeg</span>
+								</div> -->
+							</div>
+							<div class="photo-badge">
+								<svg
+									width="11"
+									height="11"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.2"
+								>
+									<path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" />
+									<circle cx="12" cy="9.5" r="2.3" />
+								</svg>
+								Vijayapura(KA), IN
+							</div>
+						</div>
+						<div class="about-copy" data-reveal>
+							<h2 class="section-title">A little about how I build.</h2>
+							<p>
+								I'm a React Native engineer who spends most days in the space between design and native
+								code — turning Figma files into interfaces that feel exactly right on both iOS and
+								Android, then going under the hood in Swift or Kotlin when the platform demands it.
+							</p>
+							<p>
+								For the last <strong>4 years</strong> at VRIZE, I've worked on a production mobile app
+								for a major U.S. restaurant chain used by <strong>millions of people</strong> — building
+								the animation systems, custom UI components, and native integrations that make an app
+								feel considered rather than assembled.
+							</p>
+							<div class="stat-row">
+								<div class="stat">
+									<span class="stat-num">4</span>
+									<span class="stat-label">years shipping<br />production apps</span>
+								</div>
+								<div class="stat">
+									<span class="stat-num">30%</span>
+									<span class="stat-label">faster app<br />startup, shipped</span>
+								</div>
+								<div class="stat">
+									<span class="stat-num">12%</span>
+									<span class="stat-label">sales lift from a<br />feature I led</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <div class="hero-visual" data-reveal>
-      <div class="device-frame device-ios">
-        <div class="device-notch"></div>
-        <div class="device-screen">
-          <div class="mock-statusbar">
-            <span>9:41</span>
-            <span class="mock-statusbar-icons">●●●</span>
-          </div>
-          <div class="mock-appbar">Rewards</div>
-          <div class="mock-card">
-            <div class="mock-card-line w70"></div>
-            <div class="mock-card-line w40"></div>
-          </div>
-          <div class="mock-card">
-            <div class="mock-card-line w60"></div>
-            <div class="mock-card-line w30"></div>
-          </div>
-          <div class="mock-toast" id="mockToast">
-            <span class="mock-toast-dot"></span>
-            $5 off applied to your order
-          </div>
-        </div>
-      </div>
-      <div class="device-frame device-android">
-        <div class="device-cam"></div>
-        <div class="device-screen">
-          <div class="mock-statusbar">
-            <span>9:41</span>
-            <span class="mock-statusbar-icons">▲●■</span>
-          </div>
-          <div class="mock-appbar mock-appbar-alt">Store Search</div>
-          <div class="mock-card mock-card-alt">
-            <div class="mock-card-line w80"></div>
-            <div class="mock-card-line w50"></div>
-          </div>
-          <div class="mock-card mock-card-alt">
-            <div class="mock-card-line w60"></div>
-            <div class="mock-card-line w35"></div>
-          </div>
-        </div>
-      </div>
-      <span class="float-chip chip-1">TypeScript</span>
-      <span class="float-chip chip-2">Swift</span>
-      <span class="float-chip chip-3">Kotlin</span>
-      <span class="float-chip chip-4">Redux</span>
-    </div>
+			<!-- ============ SKILLS ============ -->
+			<section class="section section-alt" id="skills">
+				<div class="section-inner">
+					<p class="section-eyebrow" data-reveal>// dependencies</p>
+					<h2 class="section-title" data-reveal>What's in the stack.</h2>
 
-  </div>
-  <a href="#about" class="scroll-cue" aria-label="Scroll down">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
-  </a>
-</header>
+					<div class="skills-grid">
+						<div class="skill-card" data-reveal>
+							<div class="skill-card-head">
+								<span class="skill-icon">📱</span>
+								<h3>Mobile</h3>
+							</div>
+							<div class="pill-row">
+								<span class="pill">React Native</span>
+								<span class="pill">TypeScript</span>
+								<span class="pill">Redux</span>
+								<span class="pill">MobX</span>
+								<span class="pill">React Navigation</span>
+								<span class="pill">Reanimated</span>
+								<span class="pill">Firebase</span>
+								<span class="pill">REST APIs</span>
+								<span class="pill">Hermes / JSC</span>
+							</div>
+						</div>
 
-<main>
+						<div class="skill-card" data-reveal>
+							<div class="skill-card-head">
+								<span class="skill-icon">⚙️</span>
+								<h3>Native &amp; Languages</h3>
+							</div>
+							<div class="pill-row">
+								<span class="pill">Swift</span>
+								<span class="pill">Kotlin</span>
+								<span class="pill">Java</span>
+								<span class="pill">JavaScript (ES6+)</span>
+								<span class="pill">Python</span>
+								<span class="pill">Xcode</span>
+								<span class="pill">Android Studio</span>
+							</div>
+						</div>
 
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
-  <div class="section-inner">
-    <p class="section-eyebrow" data-reveal>// about</p>
-    <div class="about-grid">
-      <div class="about-photo" data-reveal>
-        <div class="photo-frame">
-          <img src="assets/images/profile.jpg" alt="Kartik Mashal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="photo-placeholder">
-            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6"/></svg>
-            <span>Add assets/images/profile.jpg</span>
-          </div>
-        </div>
-        <div class="photo-badge">Vijayapura, IN</div>
-      </div>
-      <div class="about-copy" data-reveal>
-        <h2 class="section-title">A little about how I build.</h2>
-        <p>
-          I'm a React Native engineer who spends most days in the space between design and native
-          code — turning Figma files into interfaces that feel exactly right on both iOS and Android,
-          then going under the hood in Swift or Kotlin when the platform demands it.
-        </p>
-        <p>
-          For the last <strong>4 years</strong> at VRIZE, I've worked on a production mobile app for a
-          major U.S. restaurant chain used by <strong>millions of people</strong> — building the animation
-          systems, custom UI components, and native integrations that make an app feel considered rather
-          than assembled.
-        </p>
-        <div class="stat-row">
-          <div class="stat">
-            <span class="stat-num">4</span>
-            <span class="stat-label">years shipping<br>production apps</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">30%</span>
-            <span class="stat-label">faster app<br>startup, shipped</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">12%</span>
-            <span class="stat-label">sales lift from a<br>feature I led</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+						<div class="skill-card" data-reveal>
+							<div class="skill-card-head">
+								<span class="skill-icon">🚀</span>
+								<h3>DevOps &amp; Release</h3>
+							</div>
+							<div class="pill-row">
+								<span class="pill">Git</span>
+								<span class="pill">Jenkins</span>
+								<span class="pill">Docker</span>
+								<span class="pill">Kubernetes</span>
+								<span class="pill">AWS Lambda</span>
+								<span class="pill">AWS S3</span>
+								<span class="pill">App Store &amp; Play Store</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-<!-- ============ SKILLS ============ -->
-<section class="section section-alt" id="skills">
-  <div class="section-inner">
-    <p class="section-eyebrow" data-reveal>// dependencies</p>
-    <h2 class="section-title" data-reveal>What's in the stack.</h2>
+			<!-- ============ EXPERIENCE — CHANGELOG STYLE ============ -->
+			<section class="section" id="experience">
+				<div class="section-inner">
+					<p class="section-eyebrow" data-reveal>// changelog</p>
+					<h2 class="section-title" data-reveal>Career, read like a release log.</h2>
 
-    <div class="skills-grid">
-      <div class="skill-card" data-reveal>
-        <div class="skill-card-head">
-          <span class="skill-icon">📱</span>
-          <h3>Mobile</h3>
-        </div>
-        <div class="pill-row">
-          <span class="pill">React Native</span>
-          <span class="pill">TypeScript</span>
-          <span class="pill">Redux</span>
-          <span class="pill">MobX</span>
-          <span class="pill">React Navigation</span>
-          <span class="pill">Reanimated</span>
-          <span class="pill">Firebase</span>
-          <span class="pill">REST APIs</span>
-          <span class="pill">Hermes / JSC</span>
-        </div>
-      </div>
+					<div class="changelog">
+						<article class="changelog-entry" data-reveal>
+							<div class="changelog-marker">
+								<span class="changelog-version">v4.0.0</span>
+								<span class="changelog-line"></span>
+							</div>
+							<div class="changelog-body">
+								<div class="changelog-heading">
+									<h3>Software Engineer <span class="changelog-org">@ VRIZE</span></h3>
+									<span class="changelog-date">Sept 2022 — Present</span>
+								</div>
+								<span class="changelog-tag tag-current">current</span>
+								<ul class="changelog-list">
+									<li>
+										<span class="tag tag-added">added</span> A fully custom, multi-instance
+										toast/snackbar system with spring-based animations and full control over timing
+										&amp; interruption — replacing a third-party library.
+									</li>
+									<li>
+										<span class="tag tag-added">added</span> A fully custom, reusable animated modal
+										component used across multiple flows in the app.
+									</li>
+									<li>
+										<span class="tag tag-changed">changed</span> Migrated from
+										<code>react-native-modal</code> to <code>@gorhom/bottom-sheet</code>, resolving
+										Redux-driven race conditions between gesture and programmatic dismissal.
+									</li>
+									<li>
+										<span class="tag tag-added">added</span> Edge-to-edge display support on Android
+										for target SDK 35 (Android 15) compliance.
+									</li>
+									<li>
+										<span class="tag tag-added">added</span> A Rewards feature ("$X off on $Y
+										purchase") from concept to release — <strong>+12% sales</strong>.
+									</li>
+									<li>
+										<span class="tag tag-added">added</span> Passwordless authentication with OTP
+										and biometric verification.
+									</li>
+									<li>
+										<span class="tag tag-added">added</span> State-based store search, improving
+										discovery across large, high-density states.
+									</li>
+									<li>
+										<span class="tag tag-fixed">fixed</span> Hermes/JSC runtime issues; profiled
+										startup end-to-end — <strong>−30% startup time</strong>.
+									</li>
+								</ul>
+							</div>
+						</article>
 
-      <div class="skill-card" data-reveal>
-        <div class="skill-card-head">
-          <span class="skill-icon">⚙️</span>
-          <h3>Native &amp; Languages</h3>
-        </div>
-        <div class="pill-row">
-          <span class="pill">Swift</span>
-          <span class="pill">Kotlin</span>
-          <span class="pill">Java</span>
-          <span class="pill">JavaScript (ES6+)</span>
-          <span class="pill">Python</span>
-          <span class="pill">Xcode</span>
-          <span class="pill">Android Studio</span>
-        </div>
-      </div>
+						<article class="changelog-entry" data-reveal>
+							<div class="changelog-marker">
+								<span class="changelog-version">v1.0.0</span>
+								<span class="changelog-line"></span>
+							</div>
+							<div class="changelog-body">
+								<div class="changelog-heading">
+									<h3>Trainee Engineer <span class="changelog-org">@ VRIZE</span></h3>
+									<span class="changelog-date">Mar 2022 — Jun 2022</span>
+								</div>
+								<ul class="changelog-list">
+									<li>
+										<span class="tag tag-added">added</span> Contributed to an internal company
+										website across .NET, HTML/CSS, Node.js, and SQL — first production exposure to a
+										full-stack app.
+									</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
 
-      <div class="skill-card" data-reveal>
-        <div class="skill-card-head">
-          <span class="skill-icon">🚀</span>
-          <h3>DevOps &amp; Release</h3>
-        </div>
-        <div class="pill-row">
-          <span class="pill">Git</span>
-          <span class="pill">Jenkins</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Kubernetes</span>
-          <span class="pill">AWS Lambda</span>
-          <span class="pill">AWS S3</span>
-          <span class="pill">App Store &amp; Play Store</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+			<!-- ============ FEATURED BUILDS ============ -->
+			<section class="section section-alt" id="builds">
+				<div class="section-inner">
+					<p class="section-eyebrow" data-reveal>// featured builds</p>
+					<h2 class="section-title" data-reveal>A closer look at a few things I shipped.</h2>
 
-<!-- ============ EXPERIENCE — CHANGELOG STYLE ============ -->
-<section class="section" id="experience">
-  <div class="section-inner">
-    <p class="section-eyebrow" data-reveal>// changelog</p>
-    <h2 class="section-title" data-reveal>Career, read like a release log.</h2>
+					<div class="builds-grid">
+						<div class="build-card" data-reveal>
+							<div class="build-card-visual">
+								<div class="build-toast-demo">
+									<span class="build-toast-dot"></span>
+									$5 off applied
+								</div>
+							</div>
+							<h3>Custom toast &amp; snackbar system</h3>
+							<p>
+								Multi-instance, host-aware, and stackable — with spring animations and full control over
+								timing, replacing a third-party dependency.
+							</p>
+						</div>
 
-    <div class="changelog">
+						<div class="build-card" data-reveal>
+							<div class="build-card-visual build-card-visual-sheet">
+								<div class="build-sheet-demo"></div>
+							</div>
+							<h3>Bottom sheet migration</h3>
+							<p>
+								Led the move from <code>react-native-modal</code> to <code>@gorhom/bottom-sheet</code>,
+								resolving gesture-vs-programmatic dismissal race conditions.
+							</p>
+						</div>
 
-      <article class="changelog-entry" data-reveal>
-        <div class="changelog-marker">
-          <span class="changelog-version">v4.0.0</span>
-          <span class="changelog-line"></span>
-        </div>
-        <div class="changelog-body">
-          <div class="changelog-heading">
-            <h3>Software Engineer <span class="changelog-org">@ VRIZE</span></h3>
-            <span class="changelog-date">Sept 2022 — Present</span>
-          </div>
-          <span class="changelog-tag tag-current">current</span>
-          <ul class="changelog-list">
-            <li><span class="tag tag-added">added</span> A fully custom, multi-instance toast/snackbar system with spring-based animations and full control over timing &amp; interruption — replacing a third-party library.</li>
-            <li><span class="tag tag-added">added</span> A fully custom, reusable animated modal component used across multiple flows in the app.</li>
-            <li><span class="tag tag-changed">changed</span> Migrated from <code>react-native-modal</code> to <code>@gorhom/bottom-sheet</code>, resolving Redux-driven race conditions between gesture and programmatic dismissal.</li>
-            <li><span class="tag tag-added">added</span> Edge-to-edge display support on Android for target SDK 35 (Android 15) compliance.</li>
-            <li><span class="tag tag-added">added</span> A Rewards feature ("$X off on $Y purchase") from concept to release — <strong>+12% sales</strong>.</li>
-            <li><span class="tag tag-added">added</span> Passwordless authentication with OTP and biometric verification.</li>
-            <li><span class="tag tag-added">added</span> State-based store search, improving discovery across large, high-density states.</li>
-            <li><span class="tag tag-fixed">fixed</span> Hermes/JSC runtime issues; profiled startup end-to-end — <strong>−30% startup time</strong>.</li>
-          </ul>
-        </div>
-      </article>
+						<div class="build-card" data-reveal>
+							<div class="build-card-visual build-card-visual-edge">
+								<div class="build-edge-demo"></div>
+							</div>
+							<h3>Edge-to-edge on Android</h3>
+							<p>
+								Target SDK 35 compliance — correct system bar insets and safe-area handling across every
+								screen, zero clipping.
+							</p>
+						</div>
 
-      <article class="changelog-entry" data-reveal>
-        <div class="changelog-marker">
-          <span class="changelog-version">v1.0.0</span>
-          <span class="changelog-line"></span>
-        </div>
-        <div class="changelog-body">
-          <div class="changelog-heading">
-            <h3>Trainee Engineer <span class="changelog-org">@ VRIZE</span></h3>
-            <span class="changelog-date">Mar 2022 — Jun 2022</span>
-          </div>
-          <ul class="changelog-list">
-            <li><span class="tag tag-added">added</span> Contributed to an internal company website across .NET, HTML/CSS, Node.js, and SQL — first production exposure to a full-stack app.</li>
-          </ul>
-        </div>
-      </article>
+						<div class="build-card" data-reveal>
+							<div class="build-card-visual build-card-visual-reward">
+								<div class="build-reward-demo">12% ↑</div>
+							</div>
+							<h3>Rewards feature</h3>
+							<p>
+								Concept to release on a "$X off on $Y purchase" mechanic — drove a 12% increase in sales
+								and stronger engagement.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    </div>
-  </div>
-</section>
+			<!-- ============ EDUCATION + ACHIEVEMENTS ============ -->
+			<section class="section" id="education">
+				<div class="section-inner">
+					<div class="edu-grid">
+						<div data-reveal>
+							<p class="section-eyebrow">// education</p>
+							<h3 class="edu-title">B.E., Computer Science &amp; Engineering</h3>
+							<p class="edu-sub">B.V.V. Sangha's Basaveshwar Engineering College, Bagalkot</p>
+							<p class="edu-meta">Aug 2018 — Jul 2022 &nbsp;·&nbsp; CGPA 8.65 / 10</p>
+						</div>
+						<div data-reveal>
+							<p class="section-eyebrow">// achievements</p>
+							<ul class="achieve-list">
+								<li>Rising Star of the Year — VRIZE</li>
+								<li>Go Getter Award — VRIZE</li>
+								<li>Rank 1, Spoken Tutorial Training in Python, IIT Bombay</li>
+								<li>Selected, International Technology Data Science Bootcamp 1.0 — IEEE Madras</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
 
-<!-- ============ FEATURED BUILDS ============ -->
-<section class="section section-alt" id="builds">
-  <div class="section-inner">
-    <p class="section-eyebrow" data-reveal>// featured builds</p>
-    <h2 class="section-title" data-reveal>A closer look at a few things I shipped.</h2>
+			<!-- ============ CONTACT ============ -->
+			<section class="section section-alt" id="contact">
+				<div class="section-inner">
+					<p class="section-eyebrow" data-reveal>// contact</p>
+					<div class="contact-grid">
+						<div class="contact-copy" data-reveal>
+							<h2 class="section-title">Let's build something that feels native.</h2>
+							<p>
+								Open to React Native engineering roles and interesting mobile problems. The fastest way
+								to reach me is email -- the form sends straight there -- or find me on the platforms
+								below.
+							</p>
+							<div class="contact-links">
+								<a href="mailto:kartikmashal8@gmail.com" class="contact-link">
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<rect x="2" y="4" width="20" height="16" rx="3" />
+										<path d="m3 6 9 7 9-7" />
+									</svg>
+									kartikmashal8@gmail.com
+								</a>
+								<a href="tel:+918088793855" class="contact-link">
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<path
+											d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+										/>
+									</svg>
+									+91 80887 93855
+								</a>
+							</div>
+							<div class="hero-socials contact-socials">
+								<a
+									href="https://github.com/kartikmashal8"
+									target="_blank"
+									rel="noopener"
+									aria-label="GitHub"
+									class="social-icon"
+								>
+									<svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+										<path
+											d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.07.78 2.16 0 1.56-.02 2.81-.02 3.19 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"
+										/>
+									</svg>
+								</a>
+								<a
+									href="https://www.linkedin.com/in/kartik-a-mashal-30036219a/"
+									target="_blank"
+									rel="noopener"
+									aria-label="LinkedIn"
+									class="social-icon"
+								>
+									<svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+										<path
+											d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+										/>
+									</svg>
+								</a>
+								<a
+									href="https://www.instagram.com/kartikmashal?igsh=Z3MxdHY4c2lpb3E1&utm_source=qr"
+									target="_blank"
+									rel="noopener"
+									aria-label="Instagram"
+									class="social-icon"
+								>
+									<svg
+										width="19"
+										height="19"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<rect x="2" y="2" width="20" height="20" rx="5.5" />
+										<circle cx="12" cy="12" r="4.2" />
+										<circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
+									</svg>
+								</a>
+							</div>
+						</div>
 
-    <div class="builds-grid">
-      <div class="build-card" data-reveal>
-        <div class="build-card-visual">
-          <div class="build-toast-demo">
-            <span class="build-toast-dot"></span>
-            $5 off applied
-          </div>
-        </div>
-        <h3>Custom toast &amp; snackbar system</h3>
-        <p>Multi-instance, host-aware, and stackable — with spring animations and full control over timing, replacing a third-party dependency.</p>
-      </div>
+						<form class="contact-form" id="contactForm" data-reveal>
+							<div class="form-row">
+								<label for="fName">Name</label>
+								<input type="text" id="fName" name="name" placeholder="Your name" required />
+							</div>
+							<div class="form-row">
+								<label for="fEmail">Email</label>
+								<input type="email" id="fEmail" name="email" placeholder="you@example.com" required />
+							</div>
+							<div class="form-row">
+								<label for="fMessage">Message</label>
+								<textarea
+									id="fMessage"
+									name="message"
+									rows="5"
+									placeholder="What are you building?"
+									required
+								></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary form-submit" id="formSubmit">
+								<span class="form-submit-text">Send message</span>
+							</button>
+							<p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
 
-      <div class="build-card" data-reveal>
-        <div class="build-card-visual build-card-visual-sheet">
-          <div class="build-sheet-demo"></div>
-        </div>
-        <h3>Bottom sheet migration</h3>
-        <p>Led the move from <code>react-native-modal</code> to <code>@gorhom/bottom-sheet</code>, resolving gesture-vs-programmatic dismissal race conditions.</p>
-      </div>
+		<footer class="footer">
+			<p>Built by Kartik Mashal · <span id="year"></span></p>
+			<a href="#top" class="footer-top">Back to top ↑</a>
+		</footer>
 
-      <div class="build-card" data-reveal>
-        <div class="build-card-visual build-card-visual-edge">
-          <div class="build-edge-demo"></div>
-        </div>
-        <h3>Edge-to-edge on Android</h3>
-        <p>Target SDK 35 compliance — correct system bar insets and safe-area handling across every screen, zero clipping.</p>
-      </div>
-
-      <div class="build-card" data-reveal>
-        <div class="build-card-visual build-card-visual-reward">
-          <div class="build-reward-demo">12% ↑</div>
-        </div>
-        <h3>Rewards feature</h3>
-        <p>Concept to release on a "$X off on $Y purchase" mechanic — drove a 12% increase in sales and stronger engagement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ EDUCATION + ACHIEVEMENTS ============ -->
-<section class="section" id="education">
-  <div class="section-inner">
-    <div class="edu-grid">
-      <div data-reveal>
-        <p class="section-eyebrow">// education</p>
-        <h3 class="edu-title">B.E., Computer Science &amp; Engineering</h3>
-        <p class="edu-sub">B.V.V. Sangha's Basaveshwar Engineering College, Bagalkot</p>
-        <p class="edu-meta">Aug 2018 — Jul 2022 &nbsp;·&nbsp; CGPA 8.65 / 10</p>
-      </div>
-      <div data-reveal>
-        <p class="section-eyebrow">// achievements</p>
-        <ul class="achieve-list">
-          <li>Rising Star of the Year — VRIZE</li>
-          <li>Go Getter Award — VRIZE</li>
-          <li>Rank 1, Spoken Tutorial Training in Python, IIT Bombay</li>
-          <li>Selected, International Technology Data Science Bootcamp 1.0 — IEEE Madras</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section section-alt" id="contact">
-  <div class="section-inner">
-    <p class="section-eyebrow" data-reveal>// contact</p>
-    <div class="contact-grid">
-
-      <div class="contact-copy" data-reveal>
-        <h2 class="section-title">Let's build something that feels native.</h2>
-        <p>
-          Open to React Native engineering roles and interesting mobile problems. The fastest way to
-          reach me is email — the form sends straight there — or find me on the platforms below.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:kartikmashal8@gmail.com" class="contact-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
-            kartikmashal8@gmail.com
-          </a>
-          <a href="tel:+918088793855" class="contact-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 80887 93855
-          </a>
-        </div>
-        <div class="hero-socials contact-socials">
-          <a href="https://github.com/kartikmashal8" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.07.78 2.16 0 1.56-.02 2.81-.02 3.19 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/kartik-a-mashal-30036219a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
-          </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <form class="contact-form" id="contactForm" data-reveal>
-        <div class="form-row">
-          <label for="fName">Name</label>
-          <input type="text" id="fName" name="name" placeholder="Your name" required>
-        </div>
-        <div class="form-row">
-          <label for="fEmail">Email</label>
-          <input type="email" id="fEmail" name="email" placeholder="you@example.com" required>
-        </div>
-        <div class="form-row">
-          <label for="fMessage">Message</label>
-          <textarea id="fMessage" name="message" rows="5" placeholder="What are you building?" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary form-submit" id="formSubmit">
-          <span class="form-submit-text">Send message</span>
-        </button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
-
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <p>Built by Kartik Mashal · <span id="year"></span></p>
-  <a href="#top" class="footer-top">Back to top ↑</a>
-</footer>
-
-<script src="js/script.js"></script>
-</body>
+		<script src="js/script.js"></script>
+	</body>
 </html>
